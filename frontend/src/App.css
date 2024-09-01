@@ -7,10 +7,7 @@
 }
 
 .mainSection {
-  background-image: url("./assets/wallpaperflare.com_wallpaper.jpg");
-  height: 700px;
-  object-fit: cover;
-  background-repeat: no-repeat;
+  height: 100vh;
 }
 .login-page {
   background-image: url("./assets/login-page.svg");

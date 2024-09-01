@@ -7,7 +7,7 @@ import { resourceEndPoints } from "../services/api";
 
 const Resources = () => {
   const [resources, setResources] = useState([]);
-  const [filteredResources, setFilteredResources] = useState([]); // Define filteredResources state
+  const [filteredResources, setFilteredResources] = useState([]); 
   const [loading, setLoading] = useState(true);
   const [availabilityFilter, setAvailabilityFilter] = useState("all");
   const [quantityFilter, setQuantityFilter] = useState("");
@@ -67,7 +67,7 @@ const Resources = () => {
   };
 
   const handleDeleteResource = (resourceId) => {
-    // Remove the deleted resource from the resources state
+    
     setResources((prevResources) =>
       prevResources.filter((resource) => resource._id !== resourceId)
     );

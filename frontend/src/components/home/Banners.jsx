@@ -10,7 +10,7 @@ const Banner = () => {
       id: 1,
       right: false,
       title: "Disaster",
-      img: img_1,
+      img: "https://d3lzcn6mbbadaf.cloudfront.net/media/details/ANI-20240805174139.jpg",
       link: "/disasters",
       description:
         "Get real-time updates on ongoing disasters, including their type, location, and severity. Stay one step ahead with our comprehensive disaster information.",
@@ -19,7 +19,7 @@ const Banner = () => {
       id: 2,
       right: true,
       title: "Resources",
-      img: img_2,
+      img: "https://disastersupplycenter.com/cdn/shop/products/104-6_600x.jpg?v=1477385536",
       link: "/resources",
       description:
         "Access a wide range of essential resources, from medical equipment to transportation, to effectively respond to disasters. Ensure you have the tools you need when it matters most.",
@@ -28,7 +28,7 @@ const Banner = () => {
       id: 3,
       right: false,
       title: "Agencies",
-      img: img_3,
+      img: "https://i.ndtvimg.com/i/2015-08/thane-rescue-ndrf-650_650x400_61438672895.jpg",
       link: "/agencies",
       description:
         "Explore our network of registered rescue agencies, each with unique expertise. Collaborate, coordinate, and make a difference when communities need it most.",

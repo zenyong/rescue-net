@@ -11,7 +11,7 @@ const UpdateProfile = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // Initialize state variables with empty values as a fallback
+  
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [street, setStreet] = useState("");
@@ -22,7 +22,7 @@ const UpdateProfile = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [expertise, setExpertise] = useState("");
 
-  // useEffect to set state variables when agency is available
+  
   useEffect(() => {
     if (agency) {
       setName(agency.name);
@@ -78,7 +78,7 @@ const UpdateProfile = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Create the nested contact object
+    
     const contactData = {
       address: {
         street,
@@ -91,7 +91,7 @@ const UpdateProfile = () => {
     const user_data = {
       name,
       email,
-      contact: contactData, // Assign the nested contact object
+      contact: contactData, 
       phoneNumber,
       expertise,
     };
@@ -156,7 +156,7 @@ const UpdateProfile = () => {
                 </label>
                 <input
                   id="street"
-                  name="contact.address.street" // Use nested structure
+                  name="contact.address.street" 
                   type="text"
                   autoComplete="street"
                   
@@ -176,7 +176,7 @@ const UpdateProfile = () => {
                 </label>
                 <input
                   id="city"
-                  name="contact.address.city" // Use nested structure
+                  name="contact.address.city" 
                   type="text"
                   autoComplete="city"
                   
@@ -196,7 +196,7 @@ const UpdateProfile = () => {
                 </label>
                 <select
                   id="state"
-                  name="contact.address.state" // Use nested structure
+                  name="contact.address.state" 
                   autoComplete="state"
                   
                   className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
@@ -221,7 +221,7 @@ const UpdateProfile = () => {
                 </label>
                 <input
                   id="postalCode"
-                  name="contact.address.postalCode" // Use nested structure
+                  name="contact.address.postalCode" 
                   type="text"
                   autoComplete="postalCode"
                   
@@ -241,7 +241,7 @@ const UpdateProfile = () => {
                 </label>
                 <input
                   id="country"
-                  name="contact.address.country" // Use nested structure
+                  name="contact.address.country" 
                   type="text"
                   autoComplete="country"
                   
@@ -315,7 +315,7 @@ const UpdateProfile = () => {
         {/* Right Section (Image) */}
         <div className="lg:w-5/12 sm:hidden flex items-center justify-center">
           <img
-            src={bgimg} // Replace with the actual image path
+            src={bgimg} 
             alt="Agency"
             width="800px"
             className="object-cover ml-10 object-center sm:h-auto"

@@ -11,7 +11,7 @@ const Contact = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUsers((user) => ({ ...user, [name]: value }));
-    // console.log(users);
+    
   };
 
   const [records, setRecords] = useState([]);
@@ -20,7 +20,7 @@ const Contact = () => {
 
     const newRecords = { ...users };
     setRecords([...records, newRecords]);
-    // console.log(users);
+    
   };
 
   return (
@@ -113,7 +113,7 @@ const Contact = () => {
         {/* right section  */}
         <div className="lg:w-5/12  sm:w-full flex items-center justify-center">
           <img
-            src={bgimg} // Replace with the actual image path
+            src={bgimg} 
             alt="Agency"
             width="800px"
             className="object-cover ml-10 object-center sm:h-auto"

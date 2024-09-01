@@ -18,8 +18,7 @@ const Navbar = () => {
   const Links = [
     { id: 1, name: "Resources", link: "/resources" },
     { id: 2, name: "Disasters", link: "/disasters" },
-    { id: 3, name: "Agencies", link: "/agencies" },
-    // { id: 4, name: "About Us", link: "/about" },
+    { id: 3, name: "Agencies", link: "/agencies" }, 
     { id: 5, name: "Contact Us", link: "/contact" },
     { id: 6, name: "Alerts", link: "/alert" },
   ];

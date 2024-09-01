@@ -19,11 +19,11 @@ const Alert = () => {
           url: alertEndPoints.GET_AGENCY_ALERTS_API,
         });
 
-        // Assuming the response structure has "receivedAlerts" and "sentAlerts" arrays
+        
         const { receivedAlerts, sentAlerts } = response;
 
         setReceivedAlerts(receivedAlerts);
-        // Replace sender agency with recipient agency for "sent" alerts
+        
         const modifiedSentAlerts = sentAlerts.map((alert) => ({
           ...alert,
           senderAgency: alert.recipientAgency,

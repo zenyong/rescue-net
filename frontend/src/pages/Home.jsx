@@ -4,8 +4,10 @@ import Banner from "../components/home/Banners";
 const Home = () => {
   return (
     <div className="scrool-smooth flex flex-col items-center justify-center gap-y-16">
-      <div className="mainSection w-full flex items-center justify-center">
-        <div className="md:w-6/12 sm:w-full text-center flex flex-col gap-y-6 items-center justify-center">
+      <div className="mainSection w-full flex items-center justify-center" style={{position:"relative"}}>
+      <img src="https://images.news18.com/ibnlive/uploads/2023/12/chennai-rain-cyclone-michaung-updates-2023-12-72be5ff2bf0fc193b289a0be1167868c.jpg?impolicy=website&width=640&height=480" style={{height:"100%", width:"100%", position:"absolute", top:"0", left:"0", zIndex:"9"}}/>
+        <div style={{height:"100%", width:"100%", position:"absolute", top:"0", left:"0", background:"#000000a0", zIndex:"99"}}/>
+        <div style={{position:"absolute", zIndex:"999"}} className="md:w-6/12 sm:w-full text-center flex flex-col gap-y-6 items-center justify-center">
           <p className="font-serif 2xl:h-32 h-full md:text-6xl sm:text-3xl text-6xl overflow-hidden block font-bold text-white">
             Connect and Coordinate During Calamities
           </p>

@@ -25,12 +25,12 @@ const Profile = () => {
   return (
     <div className="w-full flex flex-col mb-20 items-center justify-center h-full scroll-smooth">
       <div className="w-full flex flex-col items-center gap-y-10 justify-center p-6">
-        {/* Titile */}
+        
         <div className="text-4xl overflow-hidden mt-2 lg:text-4xl font-bold text-indigo-700 text-center">
           Welcome To {agency.name} Profile
         </div>
 
-        {/* Change Password button */}
+        
         <Link to={"/change-password"}>
             <div
               className="flex sm:w-full md:w-[200px] flex-row gap-x-2 items-center mt-4 md:mt-0 justify-center text-white font-bold overflow-hidden md:text-[14px] sm:text-xs sm:px-2 py-2
@@ -43,9 +43,9 @@ const Profile = () => {
             </div>
           </Link>
 
-        {/* top box with edit profile button div */}
+        
         <div className="w-11/12 lg:w-8/12 xl:w-8/12 flex flex-col md:flex-row sm:flex-col md:items-center justify-between rounded-md border border-gray-300 bg-white p-6 md:p-8 shadow-md">
-          {/* Name and email div */}
+          
           <div className="flex flex-col items-start justify-center gap-y-2">
             <div className="text-indigo-600 font-bold text-2xl">Basic Details</div>
             <div className="text-gray-700 text-lg font-bold mt-2">
@@ -62,7 +62,7 @@ const Profile = () => {
             </div>
           </div>
 
-          {/* Edit profile button section */}
+          
           <Link to={"/update-profile"}>
             <div
               className="flex sm:w-full md:w-[200px] flex-row gap-x-2 items-center mt-4 md:mt-0 justify-center text-white font-bold overflow-hidden md:text-[14px] sm:text-xs sm:px-2 py-2
@@ -76,9 +76,9 @@ const Profile = () => {
           </Link>
         </div>
 
-        {/* Mid div Container for MapComponent */}
+        
         <div className="w-full md:w-10/12 lg:w-9/12 xl:w-8/12 flex md:flex-row sm:flex-col gap-x-6 sm:gap-y-6 overflow-hidden items-center justify-center">
-          {/* Address div */}
+          
           <div className="w-11/12 bg-white md:w-1/2 border border-gray-300 shadow-lg rounded-md p-6 md:p-11">
             <p className="font-bold text-2xl text-indigo-600">
               Where We Are Located
@@ -103,7 +103,7 @@ const Profile = () => {
             </Link>
           </div>
 
-          {/* Map div */}
+          
           <div className="w-full md:w-1/2 sm:w-11/12 ">
             <MapComponent coordinates={coordinates} />
           </div>

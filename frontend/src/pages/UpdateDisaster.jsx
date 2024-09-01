@@ -37,7 +37,7 @@ const UpdateDisaster = () => {
     try {
       setLoading(true);
 
-      // Make a PUT request to update the disaster
+      
       const response = await apiConnector({
         method: "PUT",
         url: `${disasterEndPoints.UPDATE_DISASTER_API}/${disasterId}`,
@@ -46,9 +46,9 @@ const UpdateDisaster = () => {
 
       setLoading(false);
 
-      // Check the response status and show a toast accordingly
+      
       toast.success("Disaster updated successfully");
-      navigate("/disasters"); // Redirect to the list of disasters
+      navigate("/disasters"); 
     } catch (error) {
       setLoading(false);
       toast.error(error.response.data.message);
@@ -72,14 +72,14 @@ const UpdateDisaster = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen">
       <div className="w-11/12 flex flex-col items-center justify-center lg:flex-row xl:flex-row 2xl:flex-row sm:flex-col flex-wrap">
-        {/* Left Section (Update Form) */}
+        
         <div className="lg:w-7/12  sm:w-full p-8">
           <h2 className="md:text-6xl sm:text-2xl overflow-hidden font-extrabold md:h-20 text-indigo-600 text-center">
             Update Disaster Info
           </h2>
 
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-            {/* Type of Disaster */}
+            
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
                 <label htmlFor="typeOfDisaster" className="sr-only">
@@ -99,7 +99,7 @@ const UpdateDisaster = () => {
               </div>
             </div>
 
-            {/* Severity */}
+            
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
                 <label htmlFor="severity" className="sr-only">
@@ -119,7 +119,7 @@ const UpdateDisaster = () => {
               </div>
             </div>
 
-            {/* Description */}
+            
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
                 <label htmlFor="description" className="sr-only">
@@ -138,8 +138,8 @@ const UpdateDisaster = () => {
               </div>
             </div>
 
-            {/* Other fields */}
-            {/* Add more input fields for other disaster properties as needed */}
+            
+            
 
             <div className="text-center w-full">
               <button
@@ -152,10 +152,10 @@ const UpdateDisaster = () => {
           </form>
         </div>
 
-        {/* Right Section (Image) */}
+        
         <div className="lg:w-5/12  sm:hidden md:block flex items-center justify-center">
           <img
-            src={bgimg} // Replace with the actual image path
+            src={bgimg} 
             alt="Agency"
             width="600px"
             className="object-cover ml-10 object-center sm:h-auto"

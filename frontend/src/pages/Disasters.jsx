@@ -9,10 +9,10 @@ const Disasters = () => {
   const [disasters, setDisasters] = useState([]);
   const [filteredDisasters, setFilteredDisasters] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [severityFilter, setSeverityFilter] = useState(""); // Severity filter
-  const [stateFilter, setStateFilter] = useState(""); // State filter
-  const [statusFilter, setStatusFilter] = useState(""); // Status filter
-  const [searchTerm, setSearchTerm] = useState(""); // Search term
+  const [severityFilter, setSeverityFilter] = useState(""); 
+  const [stateFilter, setStateFilter] = useState(""); 
+  const [statusFilter, setStatusFilter] = useState(""); 
+  const [searchTerm, setSearchTerm] = useState(""); 
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const Disasters = () => {
   }, []);
 
   useEffect(() => {
-    // Filter disasters based on severity, state, and status
+    
     let filtered = disasters;
 
     if (severityFilter) {
@@ -65,7 +65,7 @@ const Disasters = () => {
   }, [severityFilter, stateFilter, statusFilter, disasters]);
 
   const handleDetailsClick = (disasterId) => {
-    // Navigate to the disaster details page with the disaster ID as a param
+    
     navigate(`/disaster/${disasterId}`);
   };
 
@@ -193,7 +193,7 @@ const Disasters = () => {
           <div className="grid grid-cols-1 mb-20 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
             {filteredDisasters
               .filter((disaster) =>
-                // Case-insensitive search
+                
                 disaster.typeOfDisaster
                   .toLowerCase()
                   .includes(searchTerm.toLowerCase())

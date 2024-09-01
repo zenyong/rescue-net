@@ -98,7 +98,7 @@ const AgencyProfile = () => {
           <h2 className="text-4xl text-center font-bold overflow-hidden mb-8 text-indigo-600">
             List Of Disasters Where We Have Helped In
           </h2>
-          {/* Disaster info div */}
+          
           <div>
             {disasters.map((disaster) => (
               <div
@@ -134,7 +134,7 @@ const AgencyProfile = () => {
             ))}
           </div>
         </div>
-        {/* resources info div */}
+        
         <div className="w-11/12 lg:w-9/12 mt-6">
           <h2 className="text-4xl text-center font-bold overflow-hidden mb-8 text-indigo-600">
             List Of Resources We Acquire

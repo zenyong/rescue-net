@@ -3,17 +3,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllAgencies } from "../redux/Actions/agencyAction";
 import AgencyComponent from "../components/AgencyComponent";
 import * as geolib from "geolib";
-import { getAccountInfo } from "../redux/Actions/profileAction"; // Import the getAccountInfo action
-import { FiSearch } from "react-icons/fi"; // Import the search icon
+import { getAccountInfo } from "../redux/Actions/profileAction";  
 
 const Agencies = () => {
   const agencies = useSelector((state) => state.agencies);
-  const agencyInfo = useSelector((state) => state.profile.accountInfo); // Store your agency info
+  const agencyInfo = useSelector((state) => state.profile.accountInfo); 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getAllAgencies());
-    dispatch(getAccountInfo()); // Fetch your agency info
+    dispatch(getAccountInfo()); 
   }, [dispatch]);
 
   const [selectedExpertise, setSelectedExpertise] = useState("");
@@ -59,12 +58,12 @@ const Agencies = () => {
     "West Bengal",
   ];
 
-  // Define 'temp' before using it
+  
   const temp = agencies.allAgencies.agency;
 
   const filterAgenciesByExpertise = (expertise) => {
     if (expertise === "") {
-      // If no expertise is selected, show all agencies or the ones filtered by search
+      
       setFilteredAgencies(
         searchQuery === ""
           ? temp
@@ -72,11 +71,11 @@ const Agencies = () => {
               (agency) =>
                 agency.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 agency.email.toLowerCase().includes(searchQuery.toLowerCase())
-              // Add more fields as needed for searching
+              
             )
       );
     } else {
-      // Filter agencies by expertise
+      
       const filtered = temp.filter((agency) =>
         agency.expertise.includes(expertise)
       );
@@ -86,14 +85,14 @@ const Agencies = () => {
 
   const filterAgenciesByDistance = (distanceRange) => {
     const distances = {
-      within10km: 10000, // 10 kilometers in meters
-      within50km: 50000, // 50 kilometers in meters
-      within100km: 100000, // 100 kilometers in meters
-      within200km: 200000, // 200 kilometers in meters
+      within10km: 10000, 
+      within50km: 50000, 
+      within100km: 100000, 
+      within200km: 200000, 
     };
 
     if (distanceRange === ">200km") {
-      // Filter agencies that are more than 200 kilometers away
+      
       setFilteredAgencies(
         temp.filter((agency) => {
           const agencyCoordinates = {
@@ -108,7 +107,7 @@ const Agencies = () => {
         })
       );
     } else {
-      // Filter agencies within the selected distance range
+      
       setFilteredAgencies(
         temp.filter((agency) => {
           const agencyCoordinates = {
@@ -175,7 +174,7 @@ const Agencies = () => {
   );
   const uniqueExpertise = [...new Set(allExpertise)];
 
-  // Extract your agency's coordinates
+  
   const yourAgencyCoordinates = {
     latitude: agencyInfo.location.coordinates[1],
     longitude: agencyInfo.location.coordinates[0],
